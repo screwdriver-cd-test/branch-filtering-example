@@ -9,7 +9,7 @@ jobs:
     staging-commit:
         requires: [~commit:staging]
         steps:
-            - echo: echo staging
+            - echo: echo "staging"
     all-commit:
         requires: [~commit:/./]
         # /./ matches any branch name and is used here for illustration only
