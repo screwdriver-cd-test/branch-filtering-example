@@ -19,4 +19,4 @@ jobs:
     staging-pr:
         requires: [~pr:staging]
         steps:
-            - echo: echo staging pr against staging branch
+            - echo: echo staging pr against staging branch take 2
