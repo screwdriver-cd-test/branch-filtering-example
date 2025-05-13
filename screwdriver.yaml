@@ -7,7 +7,7 @@ jobs:
         steps:
             - echo: echo "commit"
     staging-commit:
-        requires: [~commit:staging]
+        requires: [~commit:/staging/]
         steps:
             - echo: echo "staging"
     all-commit:
@@ -16,6 +16,12 @@ jobs:
         # Don't use that regexp in any actual workflow.
         steps:
             - echo: echo all
+    all-pr:
+        requires: [~pr:/./]
+        # /./ matches any branch name and is used here for illustration only
+        # Don't use that regexp in any actual workflow.
+        steps:
+            - echo: echo all PR  1
     staging-pr:
         requires: [~pr:staging]
         steps:
