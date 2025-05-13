@@ -16,6 +16,12 @@ jobs:
         # Don't use that regexp in any actual workflow.
         steps:
             - echo: echo all
+    all-pr:
+        requires: [~pr:/./]
+        # /./ matches any branch name and is used here for illustration only
+        # Don't use that regexp in any actual workflow.
+        steps:
+            - echo: echo all PR 
     staging-pr:
         requires: [~pr:staging]
         steps:
